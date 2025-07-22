@@ -9,6 +9,5 @@ jobs:
         - name: list file
           run: ls -ltra 
         - name: Executing shell script
-          run: ./assci-script.sh
-        - name: list file
-          run: ls -ltra 
+          run: ./assci1-script.sh
+        
