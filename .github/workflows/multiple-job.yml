@@ -18,6 +18,7 @@ jobs:
             path: dragon.txt
     
     test_job_2:
+      needs: bluid_job_1
       runs-on: ubuntu-latest
       steps:
       - name: Test file exits
@@ -28,6 +29,7 @@ jobs:
             name: dragon-text-file
 
     deploy_job3:
+      needs: [test_job_2, bluid_job_1]  
       runs-on: ubuntu-latest
       steps:
       - name: Download a dragon file
