@@ -1,0 +1,28 @@
+name: Genrate ASCCII Artwork
+
+on:
+    push
+
+jobs:
+    bluid_job_1:
+      runs-on: ubuntu-latest
+      steps:
+      - name: Install Cowsay Program
+        run: sudo apt-get install cowsay -y
+      - name: Excute Cowsay CMD
+        run: cowsay -f dragon "Run for cover, i am a Dragon...ARAW" >> dragon.txt
+    
+    test_job_2:
+      runs-on: ubuntu-latest
+      steps:
+      - name: Test file exits
+        run: grep -i "dragon" dragon.txt
+
+    deploy_job3:
+      runs-on: ubuntu-latest
+      steps:
+      - name: Read File
+        run: cat dragon.txt
+      - name: Deploy
+        run: echo Deploying .... ....
+
