@@ -11,5 +11,7 @@ jobs:
         - name: list file
           run: ls -ltra 
         - name: Executing shell script
-          run: ./assci1-script.sh
+          run: |
+            chmod +x assci1-script.sh  
+            ./assci1-script.sh
         
